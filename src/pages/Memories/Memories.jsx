@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import confetti from "canvas-confetti";
 import styles from "./Memories.module.css";
-
+import gif from '/public/Happy Dance GIF by Créu Cat.gif';
+import music from '/public/ml.m4a';
 const messages = [
   "Сьогодні особливий день...",
   "Я памʼятаю 19 квітня 2024 року, ніби це було вчора",
@@ -77,10 +78,10 @@ const Memories = () => {
       )}
 
 
-      <audio ref={audioRef} src="/public/ml.m4a" loop />
+      <audio ref={audioRef} src={music} loop />
       {showGif && (
         <img
-          src="/public/Happy Dance GIF by Créu Cat.gif" 
+          src={gif}
           alt="hug"
           className={styles.gif}
         />
